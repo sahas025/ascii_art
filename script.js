@@ -38,6 +38,7 @@ fpsSlider.addEventListener("input", () => {
   }
 });
 
+// check if uploaded thingy is video or image and loads it for playback or converting
 
 imageUpload.addEventListener("change", event => {
   const selectedFile = event.target.files[0];
@@ -69,11 +70,11 @@ imageUpload.addEventListener("change", event => {
   }
 });
 
+// makes higher res png of displayed ascii art and triggers download
 
 saveButton.addEventListener("click", () => {
   const preElement = document.getElementById("asciiDisplay");
   
-  // Get the export scale factor from the dropdown
   const scaleFactor = parseInt(exportScale.value);
   
   const exportCanvas = document.createElement("canvas");
@@ -85,7 +86,6 @@ saveButton.addEventListener("click", () => {
   exportContext.fillStyle = "#111111";
   exportContext.fillRect(0, 0, exportCanvas.width, exportCanvas.height);
   
-  // Scale up the font size
   exportContext.font = `${6 * scaleFactor}px monospace`;
   exportContext.textBaseline = "top";
   
@@ -160,6 +160,7 @@ function stopVideo() {
   }
 }
 
+// read pixel data from image or vid, convert each pixel's brightness to ascii char then build a string of ascii art
 
 function convertToAscii() {
   if (!uploadedImage) return;
