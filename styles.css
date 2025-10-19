@@ -1,3 +1,5 @@
+
+/* yoinked from stack-overflow */
 .container {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox, Safari 18.2+, Chromium 121+ */
@@ -41,7 +43,6 @@ pre {
   border: solid 1px white;
 }
 
-/* footer start */
 
 footer {
   margin-top: auto;
@@ -84,7 +85,6 @@ footer a {
   color: yellow;
 }
 
-/* footer end */
 .shit {
   align-items: center;
 }
@@ -155,7 +155,7 @@ button {
 
 
 
-/* interactivity */
+/* interactivity in the code */
 
 button:hover {
   background: #444;
